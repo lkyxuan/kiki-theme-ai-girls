@@ -28,3 +28,15 @@
   mask-image: linear-gradient(to right, transparent 0, #000 30%);
 }
 :root:is([data-decor~="ai-girls"], [data-theme^="ai-girls"]) #ov :is(.b-claude, .b-deepseek, .b-codex, .b-openai, .b-gemini, .b-grok, .b-kimi, .b-qwen, .b-glm, .b-minimax, .b-mistral, .b-llama, .b-hunyuan, .b-seed) :is(.tc-title, .tc-sub, .tc-foot) { padding-right: 38%; }  /* 文字到立绘前就截断 */
+
+/* 总览顶上「等你处理」那一栏的小卡片（.tn）：一样按谁在干活放立绘，只露头和肩，占右边 34% */
+:root:is([data-decor~="ai-girls"], [data-theme^="ai-girls"]) #ov :is(.b-claude, .b-deepseek, .b-codex, .b-openai, .b-gemini, .b-grok, .b-kimi, .b-qwen, .b-glm, .b-minimax, .b-mistral, .b-llama, .b-hunyuan, .b-seed).tn { position: relative; overflow: hidden; }
+:root:is([data-decor~="ai-girls"], [data-theme^="ai-girls"]) #ov :is(.b-claude, .b-deepseek, .b-codex, .b-openai, .b-gemini, .b-grok, .b-kimi, .b-qwen, .b-glm, .b-minimax, .b-mistral, .b-llama, .b-hunyuan, .b-seed).tn::after {
+  content: ""; position: absolute; inset: 0 0 0 auto; width: 34%; pointer-events: none;
+  background: var(--girl) center var(--gy, 4%) / 150% auto no-repeat;
+  opacity: .92;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 35%);
+  mask-image: linear-gradient(to right, transparent 0, #000 35%);
+}
+:root:is([data-decor~="ai-girls"], [data-theme^="ai-girls"]) #ov :is(.b-claude, .b-deepseek, .b-codex, .b-openai, .b-gemini, .b-grok, .b-kimi, .b-qwen, .b-glm, .b-minimax, .b-mistral, .b-llama, .b-hunyuan, .b-seed).tn > * { position: relative; z-index: 1; }
+:root:is([data-decor~="ai-girls"], [data-theme^="ai-girls"]) #ov :is(.b-claude, .b-deepseek, .b-codex, .b-openai, .b-gemini, .b-grok, .b-kimi, .b-qwen, .b-glm, .b-minimax, .b-mistral, .b-llama, .b-hunyuan, .b-seed).tn :is(.tn-title, .tn-sub) { padding-right: 30%; }
