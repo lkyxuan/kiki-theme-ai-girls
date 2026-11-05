@@ -1,1 +1,1 @@
-{ "name": "AI 娘", "base": "light", "author": "ZipZipPipe 等（见 README）", "description": "总览卡片右侧换成 AI 娘半身立绘，仅限非商业使用" }
+{ "name": "AI 娘", "kind": "decor", "base": "light", "author": "ZipZipPipe 等（见 README）", "description": "总览卡片右侧换成 AI 娘半身立绘，叠在任何外观上，仅限非商业使用" }

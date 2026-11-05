@@ -1,6 +1,6 @@
 # Kiki 主题：AI 娘
 
-Kiki 的非官方外部主题。总览时间轴卡片按“谁在干活”，在右侧放对应 AI 娘的半身立绘。立绘只占卡片右边 40%，不挡文字。
+Kiki 的非官方**装饰**：叠在浅色、深色、刀剑神域等任何外观上。总览时间轴卡片按“谁在干活”，在右侧放对应 AI 娘的半身立绘。立绘只占卡片右边 40%，不挡文字。
 
 已配好的：Claude、DeepSeek、GPT（Codex/OpenAI 共用）、Gemini、Grok、Kimi、Qwen、GLM、MiniMax、Mistral、Llama、混元、豆包（Seed）。MiMo 的原图是黑底，暂时没放进卡片。Hermes 留了位置，放一张 `ai-girls/hermes.jpg` 再打开 theme.css 里那行就能用。
 
@@ -15,14 +15,16 @@ Kiki 的非官方外部主题。总览时间轴卡片按“谁在干活”，在
 
 ## 安装
 
-在跑 Kiki 的电脑上：
+最简单：打开 [Kiki 宝库](https://lkyxuan.github.io/kiki-store/)，点 AI 娘的「在 Kiki 里打开」。
+
+或者在跑 Kiki 的电脑上手动装：
 
 ```sh
 git clone <本仓库地址> kiki-theme-ai-girls
 sh kiki-theme-ai-girls/install.sh
 ```
 
-然后打开 Kiki › 设置 › 外观，选「AI 娘（浅色）」或「AI 娘（深色）」。卸载就删掉 `~/kiki-data/themes/ai-girls*`。
+然后打开 Kiki › 设置 › 外观，在「装饰」里勾上「AI 娘」，上面的外观随便选。卸载就删掉 `~/kiki-data/themes/ai-girls`。旧版 Kiki 不认装饰，会把它当成一个基于浅色的外观。
 
 ## 素材署名
 
