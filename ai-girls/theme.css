@@ -1,0 +1,17 @@
+/* AI 娘总览：Claude / DeepSeek / Codex(OpenAI) 干活的卡片，背景右半边铺对应的 AI 娘全身立绘（露出上半身，往左渐隐），
+   不再显示宝的圆球和名字水印。图片来自 shuaizenge/ai-girls 收录的 ZipZipPipe 等作者作品，见 CREDITS.md。 */
+:root[data-theme^="ai-girls"] #ov .b-claude   { --girl: url("claude.jpg");   --gy: 6%; }
+:root[data-theme^="ai-girls"] #ov .b-deepseek { --girl: url("deepseek.jpg"); --gy: 7%; }
+:root[data-theme^="ai-girls"] #ov .b-codex,
+:root[data-theme^="ai-girls"] #ov .b-openai   { --girl: url("gpt.jpg");      --gy: 6%; }
+
+:root[data-theme^="ai-girls"] #ov :is(.b-claude, .b-deepseek, .b-codex, .b-openai) :is(.tc-face, .tc-mark) { display: none; }
+:root[data-theme^="ai-girls"] #ov :is(.b-claude, .b-deepseek, .b-codex, .b-openai).tc::after {
+  inset: 30px 0 0 auto; width: 40%;   /* 只占右边 40%，文字区留空，不挡字 */
+  background: var(--girl) center var(--gy) / 130% auto no-repeat;
+  mix-blend-mode: multiply;   /* 立绘是白底：白色融进卡片底色，深色模式下也不会出现白块 */
+  opacity: .9;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 30%);
+  mask-image: linear-gradient(to right, transparent 0, #000 30%);
+}
+:root[data-theme^="ai-girls"] #ov :is(.b-claude, .b-deepseek, .b-codex, .b-openai) :is(.tc-title, .tc-sub, .tc-foot) { padding-right: 38%; }  /* 文字到立绘前就截断 */
