@@ -1,30 +1,29 @@
 /* AI 娘总览：按“谁在干活”，卡片右侧 40% 铺对应 AI 娘的全身立绘（露上半身、往左渐隐），不挡文字，不显示宝的圆球和名字水印。
-   图片是 originals/ 里作者原图缩到 1400 像素高的副本，署名见 README。
+   图片是 originals/ 里作者原图缩到 1400 像素高、抠掉白底的透明 webp，署名见 README。
    这是「装饰」：叠在浅色、深色、刀剑神域等任何外观上（新版 Kiki 在 设置 › 外观 › 装饰 里打开）；
    旧版 Kiki 不认装饰，会把它当基于浅色的外观，所以选择器也认 data-theme。
-   以后加新角色（比如自己画的 Hermes）：把图放成 <名字>.jpg，在下面照样加一行，并把 .b-<名字> 加进下面两个列表。 */
-:root:is([data-decor~="ai-girls"], [data-theme^="ai-girls"]) #ov .b-claude { --girl: url("claude.jpg"); }
-:root:is([data-decor~="ai-girls"], [data-theme^="ai-girls"]) #ov .b-deepseek { --girl: url("deepseek.jpg"); }
-:root:is([data-decor~="ai-girls"], [data-theme^="ai-girls"]) #ov .b-codex { --girl: url("gpt.jpg"); }
-:root:is([data-decor~="ai-girls"], [data-theme^="ai-girls"]) #ov .b-openai { --girl: url("gpt.jpg"); }
-:root:is([data-decor~="ai-girls"], [data-theme^="ai-girls"]) #ov .b-gemini { --girl: url("gemini.jpg"); }
-:root:is([data-decor~="ai-girls"], [data-theme^="ai-girls"]) #ov .b-grok { --girl: url("grok.jpg"); }
-:root:is([data-decor~="ai-girls"], [data-theme^="ai-girls"]) #ov .b-kimi { --girl: url("kimi.jpg"); }
-:root:is([data-decor~="ai-girls"], [data-theme^="ai-girls"]) #ov .b-qwen { --girl: url("qwen.jpg"); }
-:root:is([data-decor~="ai-girls"], [data-theme^="ai-girls"]) #ov .b-glm { --girl: url("glm.jpg"); }
-:root:is([data-decor~="ai-girls"], [data-theme^="ai-girls"]) #ov .b-minimax { --girl: url("minimax.jpg"); }
-:root:is([data-decor~="ai-girls"], [data-theme^="ai-girls"]) #ov .b-mistral { --girl: url("mistral.jpg"); }
-:root:is([data-decor~="ai-girls"], [data-theme^="ai-girls"]) #ov .b-llama { --girl: url("llama.jpg"); }
-:root:is([data-decor~="ai-girls"], [data-theme^="ai-girls"]) #ov .b-hunyuan { --girl: url("hunyuan.jpg"); }
-:root:is([data-decor~="ai-girls"], [data-theme^="ai-girls"]) #ov .b-seed { --girl: url("seed.jpg"); }
-/* :root:is([data-decor~="ai-girls"], [data-theme^="ai-girls"]) #ov .b-hermes { --girl: url("hermes.jpg"); }  ← 有了 hermes.jpg 再打开，并把 .b-hermes 加进下面两个列表 */
+   以后加新角色（比如自己画的 Hermes）：把白底图用 tools/cutout.py 抠成 <名字>.webp，在下面照样加一行，并把 .b-<名字> 加进下面两个列表。 */
+:root:is([data-decor~="ai-girls"], [data-theme^="ai-girls"]) #ov .b-claude { --girl: url("claude.webp"); }
+:root:is([data-decor~="ai-girls"], [data-theme^="ai-girls"]) #ov .b-deepseek { --girl: url("deepseek.webp"); }
+:root:is([data-decor~="ai-girls"], [data-theme^="ai-girls"]) #ov .b-codex { --girl: url("gpt.webp"); }
+:root:is([data-decor~="ai-girls"], [data-theme^="ai-girls"]) #ov .b-openai { --girl: url("gpt.webp"); }
+:root:is([data-decor~="ai-girls"], [data-theme^="ai-girls"]) #ov .b-gemini { --girl: url("gemini.webp"); }
+:root:is([data-decor~="ai-girls"], [data-theme^="ai-girls"]) #ov .b-grok { --girl: url("grok.webp"); }
+:root:is([data-decor~="ai-girls"], [data-theme^="ai-girls"]) #ov .b-kimi { --girl: url("kimi.webp"); }
+:root:is([data-decor~="ai-girls"], [data-theme^="ai-girls"]) #ov .b-qwen { --girl: url("qwen.webp"); }
+:root:is([data-decor~="ai-girls"], [data-theme^="ai-girls"]) #ov .b-glm { --girl: url("glm.webp"); }
+:root:is([data-decor~="ai-girls"], [data-theme^="ai-girls"]) #ov .b-minimax { --girl: url("minimax.webp"); }
+:root:is([data-decor~="ai-girls"], [data-theme^="ai-girls"]) #ov .b-mistral { --girl: url("mistral.webp"); }
+:root:is([data-decor~="ai-girls"], [data-theme^="ai-girls"]) #ov .b-llama { --girl: url("llama.webp"); }
+:root:is([data-decor~="ai-girls"], [data-theme^="ai-girls"]) #ov .b-hunyuan { --girl: url("hunyuan.webp"); }
+:root:is([data-decor~="ai-girls"], [data-theme^="ai-girls"]) #ov .b-seed { --girl: url("seed.webp"); }
+/* :root:is([data-decor~="ai-girls"], [data-theme^="ai-girls"]) #ov .b-hermes { --girl: url("hermes.webp"); }  ← 有了 hermes.webp 再打开，并把 .b-hermes 加进下面两个列表 */
 
 :root:is([data-decor~="ai-girls"], [data-theme^="ai-girls"]) #ov :is(.b-claude, .b-deepseek, .b-codex, .b-openai, .b-gemini, .b-grok, .b-kimi, .b-qwen, .b-glm, .b-minimax, .b-mistral, .b-llama, .b-hunyuan, .b-seed) :is(.tc-face, .tc-mark) { display: none; }
 :root:is([data-decor~="ai-girls"], [data-theme^="ai-girls"]) #ov :is(.b-claude, .b-deepseek, .b-codex, .b-openai, .b-gemini, .b-grok, .b-kimi, .b-qwen, .b-glm, .b-minimax, .b-mistral, .b-llama, .b-hunyuan, .b-seed).tc::after {
   inset: 30px 0 0 auto; width: 40%;   /* 只占右边 40%，文字区留空 */
   background: var(--girl) center var(--gy, 6%) / 130% auto no-repeat;
-  mix-blend-mode: multiply;   /* 立绘是白底：白色融进卡片底色，深色模式也不会出现白块 */
-  opacity: .9;
+  opacity: .92;   /* 立绘已经抠成透明底（tools/cutout.py），浅色、深色、别的外观上都不会有白块，也不发暗 */
   -webkit-mask-image: linear-gradient(to right, transparent 0, #000 30%);
   mask-image: linear-gradient(to right, transparent 0, #000 30%);
 }

@@ -2,11 +2,11 @@
 
 Kiki 的非官方**装饰**：叠在浅色、深色、刀剑神域等任何外观上。总览时间轴卡片按“谁在干活”，在右侧放对应 AI 娘的半身立绘。立绘只占卡片右边 40%，不挡文字。
 
-已配好的：Claude、DeepSeek、GPT（Codex/OpenAI 共用）、Gemini、Grok、Kimi、Qwen、GLM、MiniMax、Mistral、Llama、混元、豆包（Seed）。MiMo 的原图是黑底，暂时没放进卡片。Hermes 留了位置，放一张 `ai-girls/hermes.jpg` 再打开 theme.css 里那行就能用。
+已配好的：Claude、DeepSeek、GPT（Codex/OpenAI 共用）、Gemini、Grok、Kimi、Qwen、GLM、MiniMax、Mistral、Llama、混元、豆包（Seed）。MiMo 的原图是黑底，暂时没放进卡片。Hermes 留了位置，把白底图用 `python3 tools/cutout.py hermes.jpg ai-girls/hermes.webp` 抠成透明图，再打开 theme.css 里那行就能用。
 
 ## 仓库里有什么
 
-- `ai-girls/`：主题本身（theme.css、theme.json、每个角色一张缩到 1400 像素高的立绘）。
+- `ai-girls/`：主题本身（theme.css、theme.json、每个角色一张缩到 1400 像素高、抠掉白底的透明立绘 webp）。
 - `originals/`：从 [shuaizenge/ai-girls](https://github.com/shuaizenge/ai-girls) 备份的全部可转载原图（30 张：立绘、Q 版、三视图），保留原始文件、目录和 `catalog.json`（来源、尺寸、校验和），以后原库关了也不丢。没收：豆包官方头像和用它生成的图（官方版权）、DeepSeek 娘人声（作者禁止转载）。`originals/NOTICE-upstream.md` 是原库的署名说明，其中提到的这几项本仓库没有。
 
 | 浅色 | 深色 |
