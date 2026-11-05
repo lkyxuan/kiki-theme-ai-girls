@@ -1,6 +1,13 @@
 # Kiki 主题：AI 娘
 
-Kiki 的非官方外部主题。把总览时间轴卡片的右侧换成 AI 娘半身立绘：Claude 干的活配 Claude 娘，DeepSeek 配 DeepSeek 娘，Codex/OpenAI 配 GPT 娘。立绘只占卡片右边 40%，不挡文字。
+Kiki 的非官方外部主题。总览时间轴卡片按“谁在干活”，在右侧放对应 AI 娘的半身立绘。立绘只占卡片右边 40%，不挡文字。
+
+已配好的：Claude、DeepSeek、GPT（Codex/OpenAI 共用）、Gemini、Grok、Kimi、Qwen、GLM、MiniMax、Mistral、Llama、混元、豆包（Seed）。MiMo 的原图是黑底，暂时没放进卡片。Hermes 留了位置，放一张 `ai-girls/hermes.jpg` 再打开 theme.css 里那行就能用。
+
+## 仓库里有什么
+
+- `ai-girls/`：主题本身（theme.css、theme.json、每个角色一张缩到 1400 像素高的立绘）。
+- `originals/`：从 [shuaizenge/ai-girls](https://github.com/shuaizenge/ai-girls) 备份的全部可转载原图（30 张：立绘、Q 版、三视图），保留原始文件、目录和 `catalog.json`（来源、尺寸、校验和），以后原库关了也不丢。没收：豆包官方头像和用它生成的图（官方版权）、DeepSeek 娘人声（作者禁止转载）。`originals/NOTICE-upstream.md` 是原库的署名说明，其中提到的这几项本仓库没有。
 
 | 浅色 | 深色 |
 |---|---|
@@ -19,9 +26,10 @@ sh kiki-theme-ai-girls/install.sh
 
 ## 素材署名
 
-立绘整理自 [shuaizenge/ai-girls](https://github.com/shuaizenge/ai-girls)，本仓库保存了缩小到 1400 像素高的副本，没有改动画面。
+立绘整理自 [shuaizenge/ai-girls](https://github.com/shuaizenge/ai-girls)。除 DeepSeek 和 MiMo 外，都出自 ZipZipPipe。
 
-- **Claude、GPT**：作者 [ZipZipPipe](https://www.pixiv.net/users/18604994)（[Bilibili](https://space.bilibili.com/4168597)），出自《AI娘化》（[Pixiv 148186519](https://www.pixiv.net/artworks/148186519)）。作者在 [这里](https://www.bilibili.com/video/BV1bARXBYEZz/) 说明图片开放分享、允许再创作。
+- **Claude、GPT、Gemini、Grok、Kimi、Qwen、GLM、MiniMax、Mistral、Llama、混元、豆包（Seed）**：作者 [ZipZipPipe](https://www.pixiv.net/users/18604994)（[Bilibili](https://space.bilibili.com/4168597)），出自《AI娘化》（[Pixiv 148186519](https://www.pixiv.net/artworks/148186519)）。作者在 [这里](https://www.bilibili.com/video/BV1bARXBYEZz/) 说明图片开放分享、允许再创作。
+- **MiMo**：作者 甶丶，CC BY-NC（[来源](https://www.bilibili.com/opus/1242097128919007239)）。DeepSeek 三视图的具体绘制者待核实（取自梗鲸设定集）。
 - **DeepSeek**：原角色（鲸鱼娘）[上善无形](https://space.bilibili.com/4456176)；DeepSeek 女仆二次设计 ZipZipPipe，作者声明 **CC BY-NC-SA 4.0**（[来源](https://www.bilibili.com/video/BV1tE9XBbErS/)）。
 
 ## 许可

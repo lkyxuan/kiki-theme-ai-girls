@@ -1,17 +1,29 @@
-/* AI 娘总览：Claude / DeepSeek / Codex(OpenAI) 干活的卡片，背景右半边铺对应的 AI 娘全身立绘（露出上半身，往左渐隐），
-   不再显示宝的圆球和名字水印。图片来自 shuaizenge/ai-girls 收录的 ZipZipPipe 等作者作品，见 CREDITS.md。 */
-:root[data-theme^="ai-girls"] #ov .b-claude   { --girl: url("claude.jpg");   --gy: 6%; }
-:root[data-theme^="ai-girls"] #ov .b-deepseek { --girl: url("deepseek.jpg"); --gy: 7%; }
-:root[data-theme^="ai-girls"] #ov .b-codex,
-:root[data-theme^="ai-girls"] #ov .b-openai   { --girl: url("gpt.jpg");      --gy: 6%; }
+/* AI 娘总览：按“谁在干活”，卡片右侧 40% 铺对应 AI 娘的全身立绘（露上半身、往左渐隐），不挡文字，不显示宝的圆球和名字水印。
+   图片是 originals/ 里作者原图缩到 1400 像素高的副本，署名见 README。
+   以后加新角色（比如自己画的 Hermes）：把图放成 <名字>.jpg，在下面照样加一行，并把 .b-<名字> 加进下面两个列表。 */
+:root[data-theme^="ai-girls"] #ov .b-claude { --girl: url("claude.jpg"); }
+:root[data-theme^="ai-girls"] #ov .b-deepseek { --girl: url("deepseek.jpg"); }
+:root[data-theme^="ai-girls"] #ov .b-codex { --girl: url("gpt.jpg"); }
+:root[data-theme^="ai-girls"] #ov .b-openai { --girl: url("gpt.jpg"); }
+:root[data-theme^="ai-girls"] #ov .b-gemini { --girl: url("gemini.jpg"); }
+:root[data-theme^="ai-girls"] #ov .b-grok { --girl: url("grok.jpg"); }
+:root[data-theme^="ai-girls"] #ov .b-kimi { --girl: url("kimi.jpg"); }
+:root[data-theme^="ai-girls"] #ov .b-qwen { --girl: url("qwen.jpg"); }
+:root[data-theme^="ai-girls"] #ov .b-glm { --girl: url("glm.jpg"); }
+:root[data-theme^="ai-girls"] #ov .b-minimax { --girl: url("minimax.jpg"); }
+:root[data-theme^="ai-girls"] #ov .b-mistral { --girl: url("mistral.jpg"); }
+:root[data-theme^="ai-girls"] #ov .b-llama { --girl: url("llama.jpg"); }
+:root[data-theme^="ai-girls"] #ov .b-hunyuan { --girl: url("hunyuan.jpg"); }
+:root[data-theme^="ai-girls"] #ov .b-seed { --girl: url("seed.jpg"); }
+/* :root[data-theme^="ai-girls"] #ov .b-hermes { --girl: url("hermes.jpg"); }  ← 有了 hermes.jpg 再打开，并把 .b-hermes 加进下面两个列表 */
 
-:root[data-theme^="ai-girls"] #ov :is(.b-claude, .b-deepseek, .b-codex, .b-openai) :is(.tc-face, .tc-mark) { display: none; }
-:root[data-theme^="ai-girls"] #ov :is(.b-claude, .b-deepseek, .b-codex, .b-openai).tc::after {
-  inset: 30px 0 0 auto; width: 40%;   /* 只占右边 40%，文字区留空，不挡字 */
-  background: var(--girl) center var(--gy) / 130% auto no-repeat;
-  mix-blend-mode: multiply;   /* 立绘是白底：白色融进卡片底色，深色模式下也不会出现白块 */
+:root[data-theme^="ai-girls"] #ov :is(.b-claude, .b-deepseek, .b-codex, .b-openai, .b-gemini, .b-grok, .b-kimi, .b-qwen, .b-glm, .b-minimax, .b-mistral, .b-llama, .b-hunyuan, .b-seed) :is(.tc-face, .tc-mark) { display: none; }
+:root[data-theme^="ai-girls"] #ov :is(.b-claude, .b-deepseek, .b-codex, .b-openai, .b-gemini, .b-grok, .b-kimi, .b-qwen, .b-glm, .b-minimax, .b-mistral, .b-llama, .b-hunyuan, .b-seed).tc::after {
+  inset: 30px 0 0 auto; width: 40%;   /* 只占右边 40%，文字区留空 */
+  background: var(--girl) center var(--gy, 6%) / 130% auto no-repeat;
+  mix-blend-mode: multiply;   /* 立绘是白底：白色融进卡片底色，深色模式也不会出现白块 */
   opacity: .9;
   -webkit-mask-image: linear-gradient(to right, transparent 0, #000 30%);
   mask-image: linear-gradient(to right, transparent 0, #000 30%);
 }
-:root[data-theme^="ai-girls"] #ov :is(.b-claude, .b-deepseek, .b-codex, .b-openai) :is(.tc-title, .tc-sub, .tc-foot) { padding-right: 38%; }  /* 文字到立绘前就截断 */
+:root[data-theme^="ai-girls"] #ov :is(.b-claude, .b-deepseek, .b-codex, .b-openai, .b-gemini, .b-grok, .b-kimi, .b-qwen, .b-glm, .b-minimax, .b-mistral, .b-llama, .b-hunyuan, .b-seed) :is(.tc-title, .tc-sub, .tc-foot) { padding-right: 38%; }  /* 文字到立绘前就截断 */
